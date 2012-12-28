@@ -82,7 +82,8 @@ namespace CmdPrompt
             ArgumentValue defaultParameter =
                 arguments.FirstOrDefault(x => x.IsDefault);
 
-            if ((defaultParameter != null) &&
+            if (tokens.Any() &&
+                (defaultParameter != null) &&
                 !withoutDefault.ContainsKey(defaultParameter) &&
                 !withoutDefault.ContainsValue(0))
             {

@@ -51,7 +51,8 @@ namespace CmdPrompt
 
             ArgumentParser.Parse(tokens, arguments);
 
-            return arguments.ToDictionary(x => x.Name, x => x.Value);
+            return arguments.Where(x => x.HasValue)
+                            .ToDictionary(x => x.Name, x => x.Value);
         }
 
         private string ParseCommandName(string cmd)

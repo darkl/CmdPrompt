@@ -41,25 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Providers\Delegate\DelegateCommand.cs" />
+    <Compile Include="Providers\Delegate\DelegateCommandArgument.cs" />
+    <Compile Include="Providers\Delegate\DelegateCommandDescription.cs" />
+    <Compile Include="Providers\Delegate\Syntax\CommandSyntax.cs" />
+    <Compile Include="Providers\Delegate\DelegateCommandDescriptionProvider.cs" />
     <Compile Include="Parse\ArgumentParser.cs" />
     <Compile Include="Parse\ArgumentValue.cs" />
     <Compile Include="CommandDetails.cs" />
     <Compile Include="CommandNameNotUniqueException.cs" />
-    <Compile Include="CommandNotFoundException.cs" />
     <Compile Include="CommandContainer.cs" />
     <Compile Include="CommandPrompt.cs" />
-    <Compile Include="IArgumentDescription.cs" />
-    <Compile Include="ICommand.cs" />
-    <Compile Include="ICommandDescription.cs" />
-    <Compile Include="ICommandDescriptionProvider.cs" />
+    <Compile Include="Abstract\IArgumentDescription.cs" />
+    <Compile Include="Abstract\ICommand.cs" />
+    <Compile Include="Abstract\ICommandDescription.cs" />
+    <Compile Include="Abstract\ICommandDescriptionProvider.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Type\PropertyArgumentDescription.cs" />
-    <Compile Include="Type\TypeCommandDescription.cs" />
-    <Compile Include="Type\TypeCommandDescriptionProvider.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="Providers\Delegate\Syntax\DelegateCommandDescriptionProviderExtensions.cs" />
+    <Compile Include="Providers\Delegate\Syntax\SyntaxImplementer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
